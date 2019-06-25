@@ -12,15 +12,15 @@ fun main(args: Array<String>) {
 //    println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))
 
     // for the numbers from 1 to 100
-//    println("FizzBuzz game starts:")
-//    for (i in 1..100) {
-//        println(fizzBuzz(i))
-//    }
-//    // Let’s start counting backward from 100 and include only even numbers:
-//    println("Another FizzBuzz game starts:")
-//    for (i in 100 downTo 1 step 2) {
-//        println(fizzBuzz(i))
-//    }
+    println("FizzBuzz game starts:")
+    for (i in 1..100) {
+        println(fizzBuzz(i))
+    }
+    // Let’s start counting backward from 100 and include only even numbers:
+    println("Another FizzBuzz game starts:")
+    for (i in 100 downTo 1 step 2) {
+        println(fizzBuzz(i))
+    }
 
     iterMap()
 
