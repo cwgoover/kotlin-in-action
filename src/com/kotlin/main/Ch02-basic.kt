@@ -6,7 +6,8 @@ import java.io.StringReader
 import java.lang.NumberFormatException
 import java.util.*
 
-fun main(args: Array<String>) {
+// Basic
+fun main() {
     println("${mix(BLUE, YELLOW)}\n")
     // (1+2)+4
 //    println(eval(Sum(Sum(Num(1), Num(2)), Num(4))))

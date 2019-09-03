@@ -3,6 +3,7 @@ package com.kotlin.main
 import java.lang.IllegalArgumentException
 import java.lang.StringBuilder
 
+// Basic Defining and Calling Functions
 // If you want to expose a constant to Java code as a <code>public static final field</code>,
 // to make its usage more natural, you can mark it with the <code>const</code> modifier
 const val UNIX_LINE_SEPARATOR = "\n"

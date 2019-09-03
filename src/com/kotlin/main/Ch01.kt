@@ -2,7 +2,7 @@ package com.kotlin.main
 
 import java.util.*
 
-
+// What and why
 fun main(args: Array<String>) {
     val persons = listOf(Person("Alice"),
         Person("Bob", age = 29))    //1. named argument
