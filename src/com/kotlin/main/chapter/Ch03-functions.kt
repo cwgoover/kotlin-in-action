@@ -1,4 +1,4 @@
-package com.kotlin.main
+package com.kotlin.main.chapter
 
 import java.lang.IllegalArgumentException
 import java.lang.StringBuilder

@@ -1,4 +1,4 @@
-package com.kotlin.main
+package com.kotlin.main.chapter
 
 // Multiline triple-quoted strings
 // One of the areas where multiline strings can be useful in your programs (besides games that use ASCII art) is tests.

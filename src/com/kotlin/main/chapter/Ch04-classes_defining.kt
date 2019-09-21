@@ -1,4 +1,4 @@
-package com.kotlin.main
+package com.kotlin.main.chapter
 
 // Classes, objects, and interface
 fun main() {
