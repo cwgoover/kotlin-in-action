@@ -36,11 +36,11 @@ fun main() {
 
 // 'try', 'catch', and 'finally'
 fun readNumber(reader: BufferedReader): Int? {
-    try {
+    return try {
         val line = reader.readLine()
-        return Integer.parseInt(line)
+        Integer.parseInt(line)
     } catch (e: NumberFormatException) {
-        return null
+        null
     } finally {
         reader.close()
     }
