@@ -1,5 +1,7 @@
 package com.kotlin.main.chapter
 
+import java.io.Serializable
+
 // Classes, objects, and interface
 fun main() {
     // using incorrect syntax. Variables in Kotlin are declared like:
@@ -102,8 +104,51 @@ class Ch04 {
     }
 
     /** 4.1.4 Inner And nested classes: nested by default **/
+    //  The difference is that Kotlin nested classes don’t have access to the outer class instance,
+    //  unless you specifically request that.
 
+    // A nested class in Kotlin with no explicit modifiers is the same as a static nested class in Java.
+    // To turn it into an inner class, so that it contains a reference to an outer class, you use the **inner** modifier.
+
+    interface State: Serializable
+
+    interface View {
+        fun getCurrentState(): State
+        fun restoreState(state: State) {}
+    }
+
+    class OuterButton : View {
+
+        override fun getCurrentState(): State = InnerButtonState()
+
+        override fun restoreState(state: State) { /*...*/ }
+
+        // This class is an analogue of a static nested class in Java.
+        class NestedButtonState : State { /*...*/ }
+
+        inner class InnerButtonState : State {
+            // The syntax to reference an instance of an outer class in Kotlin also differs from Java.
+            // You write this@Outer to access the Outer class from the Inner class:
+            fun getOuterReference(): OuterButton = this@OuterButton
+        }
+    }
 
     /** 4.1.5 Sealed classes: defining restricted class hierarchies **/
+    // You mark a superclass with the **sealed** modifier, and that restricts the possibility of creating subclasses.
+    // All the direct subclasses must be nested in the superclass, and a subclass can’t be made a data class
+
+    // Mark a base class as sealed...
+    sealed class Expr {
+        // ...and list all the possible subclasses as nested classes.
+        class Num(val value: Int) : Expr()
+        class Sum(val left: Expr, val right: Expr): Expr()
+    }
+
+    fun eval(e: Expr): Int =
+            // The "when" expression covers all possible cases, so no "else" branch is needed.
+            when (e) {
+                is Expr.Num -> e.value
+                is Expr.Sum -> eval(e.left) + eval(e.right)
+            }
 
 }
