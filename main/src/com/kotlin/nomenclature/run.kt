@@ -1,4 +1,4 @@
-package com.kotlin.main.nomenclature
+package com.kotlin.nomenclature
 
 /**
  * Kotlin run expression can change the outer property. Hence in the above code, we’ve redefined it for the local scope.

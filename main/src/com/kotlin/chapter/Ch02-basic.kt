@@ -1,6 +1,6 @@
-package com.kotlin.main.chapter
+package com.kotlin.chapter
 
-import com.kotlin.main.chapter.Color.*
+import com.kotlin.chapter.Color.*
 import java.io.BufferedReader
 import java.io.StringReader
 import java.lang.NumberFormatException

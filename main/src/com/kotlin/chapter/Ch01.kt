@@ -1,11 +1,13 @@
-package com.kotlin.main.chapter
+package com.kotlin.chapter
 
 import java.util.*
 
 // What and why
 fun main(args: Array<String>) {
-    val persons = listOf(Person("Alice"),
-            Person("Bob", age = 29))    //1. named argument
+    val persons = listOf(
+        Person("Alice"),
+        Person("Bob", age = 29)
+    )    //1. named argument
 
     // The Elvis operator ?: returns zero if age is null.
     val oldest = persons.maxBy { it.age ?: 0 }  //2. lambda expression; "elvis" operator

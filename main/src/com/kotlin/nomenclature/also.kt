@@ -1,4 +1,4 @@
-package com.kotlin.main.nomenclature
+package com.kotlin.nomenclature
 
 //As the name says, also expressions does some additional processing on the object it was invoked.
 //Unlike let, it returns the original object instead of any new return data. Hence the return data has always the same type.

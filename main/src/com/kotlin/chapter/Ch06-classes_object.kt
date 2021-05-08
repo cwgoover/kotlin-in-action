@@ -1,4 +1,4 @@
-package chapter
+package com.kotlin.chapter
 
 fun main() {
 }

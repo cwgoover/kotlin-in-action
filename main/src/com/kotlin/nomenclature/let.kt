@@ -1,4 +1,4 @@
-
+package com.kotlin.nomenclature
 
 //let takes the object it is invoked upon as the parameter and returns the result of the lambda expression.
 //Kotlin let is a scoping function wherein the variables declared inside the expression cannot be used outside.
@@ -21,7 +21,7 @@ fun main(args: Array<String>) {
     println("Nesting let:")
     nestingLet()
 
-    println("let for null checks:")
+//    println("let for null checks:")
     checkNull()
 }
 
@@ -61,6 +61,6 @@ fun checkNull() {
     var name : String? = "Kotlin let null check"
     name?.let { println(it) } //prints Kotlin let null check
     name = null
-    name?.let { println(it) } //nothing happens
+    name?.let { println(it as String?) } //nothing happens
 }
 

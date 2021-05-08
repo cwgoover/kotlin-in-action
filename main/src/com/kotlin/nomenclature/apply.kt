@@ -1,4 +1,4 @@
-package com.kotlin.main.nomenclature
+package com.kotlin.nomenclature
 
 //Kotlin apply is an extension function on a type. It runs on the object reference
 // (also known as receiver) into the expression and returns the object reference on

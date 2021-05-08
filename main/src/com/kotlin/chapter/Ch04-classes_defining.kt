@@ -1,4 +1,4 @@
-package com.kotlin.main.chapter
+package com.kotlin.chapter
 
 import java.io.Serializable
 
@@ -96,20 +96,21 @@ class Ch04 {
 
     // Kotlin forbids you to reference the less-visible type TalkativeButton (internal, in this case)
     // from the public function giveSpeech.
-    /* internal */fun TalkativeButton.giveSpeech() {
-        yell()
-        // A protected member is only visible in the class and its subclasses.
-        // Extension functions of a class don’t get access to its private or protected members.
-        whisper()
-    }
+//    /* internal */fun TalkativeButton.giveSpeech() {
+//        yell()
+//        // A protected member is only visible in the class and its subclasses.
+//        // Extension functions of a class don’t get access to its private or protected members.
+//        whisper()
+//    }
 
     /** 4.1.4 Inner And nested classes: nested by default **/
-    //  The difference is that Kotlin nested classes don’t have access to the outer class instance,
-    //  unless you specifically request that.
-
-    // A nested class in Kotlin with no explicit modifiers is the same as a static nested class in Java.
-    // To turn it into an inner class, so that it contains a reference to an outer class, you use the **inner** modifier.
-
+    /**
+     * The difference is that Kotlin nested classes don’t have access to the outer class instance,
+     * unless you specifically request that.
+     *
+     * A nested class in Kotlin with no explicit modifiers is the same as a static nested class in Java.
+     * To turn it into an inner class, so that it contains a reference to an outer class, you use the [inner] modifier.
+     */
     interface State: Serializable
 
     interface View {
@@ -134,8 +135,9 @@ class Ch04 {
     }
 
     /** 4.1.5 Sealed classes: defining restricted class hierarchies **/
-    // You mark a superclass with the **sealed** modifier, and that restricts the possibility of creating subclasses.
-    // All the direct subclasses must be nested in the superclass, and a subclass can’t be made a data class
+    /** You mark a superclass with the [sealed] modifier, and that restricts the possibility of creating subclasses.
+     * All the direct subclasses must be nested in the superclass, and a subclass can’t be made a data class
+     */
 
     // Mark a base class as sealed...
     sealed class Expr {

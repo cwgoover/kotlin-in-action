@@ -1,4 +1,4 @@
-package com.kotlin.main.nomenclature
+package com.kotlin.nomenclature
 
 //Like apply, with is used to change instance properties without the need to call dot
 // operator over the reference every time.
